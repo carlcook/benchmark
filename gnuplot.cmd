@@ -1,3 +1,10 @@
+ ./src/benchmarker --benchmark_format=csv > datafile
+
+
+
+cat datafile | cut -d ',' -f4 > results
+
+
 gnuplot> binwidth=5
 gnuplot> set boxwidth binwidth
 gnuplot> bin(x,width)=width*floor(x/width) + binwidth/2.0
